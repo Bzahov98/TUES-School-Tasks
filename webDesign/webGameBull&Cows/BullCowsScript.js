@@ -1,9 +1,3 @@
- <!DOCTYPE html>
-<html>
-	
-	<head>
-		<meta charset="utf-8">
-		<script>
 			var lengthOfNum = 3;
 			var answer = "";
 			var turns= 1;
@@ -52,7 +46,7 @@
 					return;
 				}
 				if(newOne.length != lengthOfNum){
-					document.getElementById("UserInput").value = "Lenght Need To Be " + answer;
+					document.getElementById("UserInput").value ="Lenght should Be " + lengthOfNum;
 					return;
 				}
 				var results = GetResults(newOne);
@@ -130,70 +124,3 @@
 				answer = "";
 				hints = 0;
 			}
-			
-		</script>
-	</head>
-
-<body>
-
-<h3>Бикове и Крави</h3>
-<p> Изберете дължината на числото: </p>
-<form>
-	<input type="radio" name="sizeForm" onclick="check(this.value)" value="3" checked="checked" >3
-	<input type="radio" name="sizeForm" onclick="check(this.value)" value="4">4
-	<input type="radio" name="sizeForm" onclick="check(this.value)" value="5">5
-	<input type="radio" name="sizeForm" onclick="check(this.value)" value="6">6
-	<input type="radio" name="sizeForm" onclick="check(this.value)" value="7">7
-	<input type="radio" name="sizeForm" onclick="check(this.value)" value="8">8
-	<input type="radio" name="sizeForm" onclick="check(this.value)" value="9">9
-	<input type="radio" name="sizeForm" onclick="check(this.value)" value="10">10<br>
-	<p> За сега трябва, поне веднъж, да се кликне !!! </p>
-</form>
-
-		<p id="Choosed"></p>
-		
-		<button type="button"
-			id="StartBtn"
-			onclick="koala()">
-			Start Game / New Game. 
-		</button>
-		
-		<p>Дайте Своето Предположение:</p>
-		
-		<input type = "text"
-    	   id = "UserInput" 
-    	   onkeydown = "if (event.keyCode == 13){
-    	   					document.getElementById('btnSearch').click();
-    	   				}"    
-		/>
-		
-		<input type = "button"
-		   id = "btnSearch"
-		   value = "YouReady? "
-		   onclick = "UserReady();"
-		/>
-		
-		<input type = "button"
-		   id = "ClearTable"
-		   value = "Clear Table "
-		   onclick = "Clear();"
-		/>
-		
-		<p id="ResultsTable">Results: </p>
-		
-		<p id="DebugTable">Hints: </p>
-		
-		<input type = "button"
-		   id = "GiveUp"
-		   value = "Give Up "
-		   onclick = "GiveUp();"
-		/>
-		
-		<input type = "button"
-		   id = "hint"
-		   value = "Hint"
-		   onclick = "Hint();"
-		/>
-	</body>
-</html>
-
